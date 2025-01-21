@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://70gio1amuevr"]
+
+[ext_resource type="Script" path="res://Scripts/flurp.gd" id="1_iogit"]
+[ext_resource type="Texture2D" uid="uid://bx1l8os17j05y" path="res://Sprites/Player/Flurp -sp.png" id="2_4i6hr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8yqsx"]
+radius = 152.21
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+collision_layer = 3
+script = ExtResource("1_iogit")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8yqsx")
+
+[node name="Flurp-sp" type="Sprite2D" parent="."]
+position = Vector2(0.999999, -44)
+scale = Vector2(3.01563, 3.01563)
+texture = ExtResource("2_4i6hr")

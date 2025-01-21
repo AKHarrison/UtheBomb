@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://dg5igh56smjen"]
+
+[ext_resource type="PackedScene" uid="uid://b0mr5w6gbkhup" path="res://Scenes/player.tscn" id="1_g8rec"]
+[ext_resource type="Script" path="res://Scenes/utb.gd" id="1_nv40r"]
+[ext_resource type="PackedScene" uid="uid://70gio1amuevr" path="res://Scenes/Flurp.tscn" id="2_lb6ge"]
+[ext_resource type="PackedScene" uid="uid://dsnpaihfcn7gk" path="res://Scenes/trork.tscn" id="3_knhng"]
+
+[node name="UTB" type="Node2D"]
+script = ExtResource("1_nv40r")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = -5291.0
+offset_top = -2917.0
+offset_right = 6274.0
+offset_bottom = 3552.0
+color = Color(0.52999, 0.554277, 0.877699, 1)
+
+[node name="player" parent="." instance=ExtResource("1_g8rec")]
+position = Vector2(1784, -1443)
+
+[node name="flurp" parent="." instance=ExtResource("2_lb6ge")]
+position = Vector2(-188, 278)
+
+[node name="Area2D" parent="." instance=ExtResource("3_knhng")]
+position = Vector2(-2356, -1043)
+
+[node name="Area2D" parent="Area2D" instance=ExtResource("3_knhng")]
+position = Vector2(4883, 354)
+
+[node name="Area2D3" parent="Area2D" instance=ExtResource("3_knhng")]
+position = Vector2(4546, 3752)
+
+[node name="Area2D2" parent="Area2D" instance=ExtResource("3_knhng")]
+position = Vector2(-1454, 2814)
+
+[node name="Area2D4" parent="Area2D" instance=ExtResource("3_knhng")]
+position = Vector2(2527, -689)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_lb6ge")]
+position = Vector2(1219, 1969)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("2_lb6ge")]
+position = Vector2(3223, 2020)
+
+[node name="CharacterBody2D4" parent="." instance=ExtResource("2_lb6ge")]
+position = Vector2(82, 2895)
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("2_lb6ge")]
+position = Vector2(-1137, 926)

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://njuoks4liga6"]
+
+[ext_resource type="Script" path="res://Scripts/pickle.gd" id="1_i7k2u"]
+[ext_resource type="Texture2D" uid="uid://cl1cob1hvl5y7" path="res://Sprites/fickle pickle -sp.png" id="2_2uhql"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dwa54"]
+radius = 6.40312
+
+[node name="Pickle" type="Area2D"]
+top_level = true
+rotation = 0.718905
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_i7k2u")
+
+[node name="FicklePickle-sp" type="Sprite2D" parent="."]
+position = Vector2(2.82218, 0.187932)
+rotation = -0.721469
+scale = Vector2(0.424469, 0.376402)
+texture = ExtResource("2_2uhql")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.658561, 0.752527)
+rotation = -2.27903
+shape = SubResource("CircleShape2D_dwa54")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
