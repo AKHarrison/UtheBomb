@@ -6,8 +6,14 @@ var is_timer_running = false
 
 var ammo_types = [
 	preload("res://Scenes/pickle.tscn"),
-	preload("res://Scenes/pinkpickle.tscn")
-]
+	preload("res://Scenes/pinkpickle.tscn"),
+	]
+	
+var insult_types = [
+	preload("res://Scenes/insult.tscn"),
+	preload("res://Scenes/insult2.tscn"),
+	preload("res://Scenes/insult3.tscn")
+] 
 var current_ammo_index = 0
 const AMMO_DAMAGE = 0.5
 
@@ -16,6 +22,15 @@ func _ready():
 
 func _input(event):
 	if event.is_action_pressed("ui_fire"):
+		is_timer_running = not is_timer_running
+		
+		if is_timer_running:
+			timer.start()
+		
+		else: 
+			timer.stop()
+			
+	if event.is_action_pressed("ui_insult"):
 		is_timer_running = not is_timer_running
 		
 		if is_timer_running:

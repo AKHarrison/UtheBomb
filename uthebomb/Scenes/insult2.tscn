@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://0072nygmfnb5"]
+
+[ext_resource type="Script" path="res://Scripts/pickle.gd" id="1_n5cmt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_soptf"]
+radius = 15.6205
+
+[node name="pickle" type="Area2D"]
+top_level = true
+position = Vector2(2.98023e-08, -1)
+rotation = 0.825333
+collision_layer = 0
+collision_mask = 3
+script = ExtResource("1_n5cmt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = -6.27116
+shape = SubResource("CircleShape2D_soptf")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -97.0
+offset_top = -48.5
+offset_right = 97.0
+offset_bottom = 48.5
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.818861
+theme_override_colors/font_color = Color(0.807843, 0, 0, 1)
+theme_override_font_sizes/font_size = 71
+text = "DIVVY"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
