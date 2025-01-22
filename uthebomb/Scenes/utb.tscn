@@ -33,14 +33,14 @@ offset_bottom = 3552.0
 color = Color(0.52999, 0.554277, 0.877699, 1)
 
 [node name="ColorRect4" type="ColorRect" parent="CanvasLayer"]
-offset_left = 6277.0
-offset_top = 3547.0
-offset_right = 17842.0
-offset_bottom = 10016.0
+offset_left = 6325.0
+offset_top = 3537.0
+offset_right = 17890.0
+offset_bottom = 10006.0
 color = Color(0.852367, 0.763783, 0.89427, 1)
 
 [node name="player" parent="." instance=ExtResource("1_g8rec")]
-position = Vector2(1784, -1443)
+position = Vector2(7930, -473)
 
 [node name="flurp" parent="." instance=ExtResource("2_lb6ge")]
 position = Vector2(-188, 278)

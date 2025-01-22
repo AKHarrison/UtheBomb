@@ -3,7 +3,7 @@ extends Area2D
 @onready var timer = $Timer
 
 var is_timer_running = false
-var enemies_in_range = get_overlapping_bodies()
+
 var ammo_types = [
 	preload("res://Scenes/pickle.tscn"),
 	preload("res://Scenes/pinkpickle.tscn")
@@ -11,6 +11,8 @@ var ammo_types = [
 var current_ammo_index = 0
 const AMMO_DAMAGE = 0.5
 
+func _ready():
+	GlobalAutoload.timer.timeout.connect(_physics_process)
 
 func _input(event):
 	if event.is_action_pressed("ui_fire"):
@@ -27,9 +29,16 @@ func _input(event):
 		
 
 func _physics_process(delta):
+	var enemies_in_range = get_overlapping_bodies()
 	if enemies_in_range.size() > 0:
 		var target_enemy = enemies_in_range.front()
 		look_at(target_enemy.global_position)
+		GlobalAutoload.timer.paused = false
+	else: 
+		GlobalAutoload.timer.paused = true
+		
+	
+			
 
 
 
@@ -40,7 +49,6 @@ func shoot():
 	new_ammo.global_rotation = %Mouth.global_rotation
 	%Mouth.add_child((new_ammo))
 	
-
 	
 func change_ammo():
 	current_ammo_index = (current_ammo_index + 1) % ammo_types.size()
