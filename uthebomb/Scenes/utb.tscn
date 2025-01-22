@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dg5igh56smjen"]
 
 [ext_resource type="PackedScene" uid="uid://b0mr5w6gbkhup" path="res://Scenes/player.tscn" id="1_g8rec"]
-[ext_resource type="Script" path="res://Scenes/utb.gd" id="1_nv40r"]
+[ext_resource type="Script" path="res://Scripts/utb.gd" id="1_nv40r"]
 [ext_resource type="PackedScene" uid="uid://70gio1amuevr" path="res://Scenes/Flurp.tscn" id="2_lb6ge"]
 [ext_resource type="PackedScene" uid="uid://dsnpaihfcn7gk" path="res://Scenes/trork.tscn" id="3_knhng"]
 
@@ -11,12 +11,33 @@ script = ExtResource("1_nv40r")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
 
+[node name="ColorRect3" type="ColorRect" parent="CanvasLayer"]
+offset_left = -5235.0
+offset_top = 3554.0
+offset_right = 6330.0
+offset_bottom = 10023.0
+color = Color(0.553259, 0.924384, 0.656682, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer"]
+offset_left = 6278.0
+offset_top = -2922.0
+offset_right = 17843.0
+offset_bottom = 3547.0
+color = Color(0.485236, 0.707906, 0.963237, 1)
+
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 offset_left = -5291.0
 offset_top = -2917.0
 offset_right = 6274.0
 offset_bottom = 3552.0
 color = Color(0.52999, 0.554277, 0.877699, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="CanvasLayer"]
+offset_left = 6277.0
+offset_top = 3547.0
+offset_right = 17842.0
+offset_bottom = 10016.0
+color = Color(0.852367, 0.763783, 0.89427, 1)
 
 [node name="player" parent="." instance=ExtResource("1_g8rec")]
 position = Vector2(1784, -1443)

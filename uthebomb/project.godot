@@ -15,6 +15,10 @@ run/main_scene="res://Scenes/utb.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.png"
 
+[autoload]
+
+GlobalAutoload="*res://GlobalAutoload.gd"
+
 [input]
 
 ui_fire={

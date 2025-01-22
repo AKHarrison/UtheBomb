@@ -8,7 +8,7 @@ var animations = $animations
 var state_machine = $state_machine
 
 func _ready() -> void:
-	
+	GlobalAutoload.timer.timeout.connect(_on_timer_timeout)
 	state_machine.init(self)
 	
 func _unhandled_input(event: InputEvent) -> void:
