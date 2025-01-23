@@ -7,7 +7,7 @@ var health = 3
 func _physics_process(delta):
 	var distance = global_position.direction_to(player.global_position)
 
-	velocity = distance * 200.00
+	velocity = distance * 100.00
 
 	move_and_slide()
 

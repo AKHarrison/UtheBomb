@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cerpwbnu0svvp" path="res://Sprites/Player/Player head.png" id="1_ykk6g"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7nu7t"]
-radius = 1605.93
+radius = 197.124
 
 [node name="Head2" type="Area2D"]
 rotation = 0.0280822
@@ -21,7 +21,7 @@ position = Vector2(0, -2.38419e-07)
 [node name="PlayerHead" type="Sprite2D" parent="headpivot"]
 position = Vector2(0.0561574, 1.99922)
 rotation = -0.0228455
-scale = Vector2(0.845703, 0.835938)
+scale = Vector2(0.0675412, 0.0667613)
 texture = ExtResource("1_ykk6g")
 
 [node name="Mouth" type="Marker2D" parent="headpivot/PlayerHead"]

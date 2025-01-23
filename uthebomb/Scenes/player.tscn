@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c2a22ymp85i2b" path="res://Scenes/countdown.tscn" id="6_lrlof"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ni0cc"]
-radius = 102.005
+radius = 11.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_bjts0")
@@ -17,11 +17,12 @@ script = ExtResource("1_bjts0")
 [node name="Countdown" parent="." instance=ExtResource("6_lrlof")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-10, 185)
+position = Vector2(-1, 16)
 shape = SubResource("CircleShape2D_ni0cc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 unique_name_in_owner = true
+scale = Vector2(0.106445, 0.106445)
 texture = ExtResource("2_4isva")
 
 [node name="state_machine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
@@ -36,17 +37,17 @@ script = ExtResource("5_nu3c4")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 scale = Vector2(1.22454, 1.19063)
-zoom = Vector2(0.17, 0.17)
+zoom = Vector2(1.3, 1.3)
 
 [node name="YerDeed" type="CanvasLayer" parent="Camera2D"]
 unique_name_in_owner = true
 visible = false
 
 [node name="ColorRect" type="ColorRect" parent="Camera2D/YerDeed"]
-offset_left = -3407.0
-offset_top = -1949.0
-offset_right = 3521.0
-offset_bottom = 2044.0
+offset_left = -39.0
+offset_top = -26.0
+offset_right = 1201.0
+offset_bottom = 672.0
 color = Color(0.815686, 0.184314, 0.176471, 0.658824)
 
 [node name="Label" type="Label" parent="Camera2D/YerDeed"]
@@ -55,18 +56,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -566.0
-offset_top = -226.0
-offset_right = 861.0
-offset_bottom = 192.0
+offset_left = -318.0
+offset_top = -108.0
+offset_right = 806.0
+offset_bottom = 221.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 241
+theme_override_font_sizes/font_size = 146
 text = "yer DEED!"
 
 [node name="Head2" parent="." instance=ExtResource("6_1sw8n")]
-position = Vector2(12, -220)
+position = Vector2(0, -23)
 rotation = 0.077468
 
 [node name="Timer" type="Timer" parent="."]

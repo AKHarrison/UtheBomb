@@ -4,9 +4,7 @@ extends Node
 @export
 var animation_name: String
 @export
-var move_speed: float = 800
-
-var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
+var move_speed: float = 300
 
 # Hold a reference to the parent so that it can be controlled by the state
 var parent: Player
