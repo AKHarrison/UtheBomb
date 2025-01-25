@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://dq265hd01rrd1"]
+
+[ext_resource type="Texture2D" uid="uid://bx1l8os17j05y" path="res://Sprites/Player/Flurp -sp.png" id="2_iqwk2"]
+
+[sub_resource type="GDScript" id="GDScript_ekf0l"]
+script/source = "extends CharacterBody2D
+
+@onready var navigation_agent: NavigationAgent2D = $NavigationAgent2
+@export var target_to_chase: CharacterBody2D
+
+const SPEED = 180.0
+
+func _physics_process(delta: float) -> void:
+	navigation_agent.target_position = target_to_chase.global_position
+	velocity = global_position.direction_to(navigation_agent.get_next_path_position()) * SPEED
+	move_and_slide()
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mdjrv"]
+
+[node name="NavFlurp" type="CharacterBody2D" node_paths=PackedStringArray("target_to_chase")]
+script = SubResource("GDScript_ekf0l")
+target_to_chase = NodePath(".")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_mdjrv")
+
+[node name="Flurp-sp" type="Sprite2D" parent="."]
+position = Vector2(3, -8)
+scale = Vector2(0.273438, 0.273438)
+texture = ExtResource("2_iqwk2")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
