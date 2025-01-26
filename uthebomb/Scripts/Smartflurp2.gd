@@ -3,7 +3,7 @@ extends CharacterBody2D
 var health = 3 
   # Reference to the Flurp2D sprite
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
-@onready var dead_flurp = preload("res://Scenes/DeadFlurp.tscn")
+@onready var dead_flurp = preload("res://Scenes/DeadFlurp2.tscn")
 @onready	 var target_to_chase = get_node("/root/UTB/player")
 
 

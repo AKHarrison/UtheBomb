@@ -1,15 +1,16 @@
-[gd_scene load_steps=12 format=4 uid="uid://dg5igh56smjen"]
+[gd_scene load_steps=13 format=4 uid="uid://dg5igh56smjen"]
 
 [ext_resource type="PackedScene" uid="uid://b0mr5w6gbkhup" path="res://Scenes/player.tscn" id="1_g8rec"]
 [ext_resource type="Script" path="res://Scripts/utb.gd" id="1_nv40r"]
 [ext_resource type="Texture2D" uid="uid://drbfq3yw2dqb3" path="res://Sprites/townmap.jpg" id="2_yr6jb"]
 [ext_resource type="Texture2D" uid="uid://cbwnrigdbqr3u" path="res://Sprites/Untitled.png" id="4_w0fen"]
 [ext_resource type="Script" path="res://Scenes/mob_spawn.gd" id="6_a1li5"]
+[ext_resource type="PackedScene" uid="uid://s7gnuukj40i2" path="res://Scenes/home.tscn" id="7_1qstf"]
 [ext_resource type="PackedScene" uid="uid://cgi7xkge6ioe" path="res://house.tscn" id="7_qpt6a"]
 
 [sub_resource type="Curve2D" id="Curve2D_d0jk2"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -5199.5, -2433.99, 0, 0, 0, 0, -4622.68, -2449.94, 0, 0, 0, 0, -4354.5, -2516.19, 0, 0, 0, 0, -4145.89, -2164.19, 0, 0, 0, 0, -5005.54, -2176.84, 0, 0, 0, 0, -5050.07, -2402.37)
+"points": PackedVector2Array(0, 0, 0, 0, -5199.5, -2433.99, 0, 0, 0, 0, -4622.68, -2449.94, 0, 0, 0, 0, -4354.5, -2516.19, 0, 0, 0, 0, -4113.13, -1930.11, 0, 0, 0, 0, -5026.34, -2002.54, 0, 0, 0, 0, -5050.07, -2402.37)
 }
 point_count = 6
 
@@ -153,9 +154,9 @@ sources/0 = SubResource("TileSetAtlasSource_jtc0o")
 sources/1 = SubResource("TileSetAtlasSource_5nrgp")
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_l2rmo"]
-vertices = PackedVector2Array(-3292.44, -1732.84, -5194.82, -1749.53, -5194.82, -1754.79, -3292.44, -1754.79, -5230.44, -1749.84, -5238, -1749.91, -5238, -1754.79, -5230.44, -1754.79, -4697.01, -2435.48, -4363.63, -2437.73, -4229.69, -2437.73, -4619.69, -2397.16, -4753.63, -2397.16, -4770.42, -2181.61, -4712.2, -2178.57, -4957.03, -2178.57, -4932.78, -2181.61, -3818.92, -1997.2, -3629.38, -2001.2, -3379.92, -2001.2, -4137.42, -1926.61, -4048.72, -1980.05, -4137.42, -2130.98, -4299.78, -2130.98, -4323.42, -2133.98, -4619.69, -2189.73, -3292.44, -2491.72, -3292.44, -1790.96, -3379.92, -2041.19, -4363.63, -2645.16, -4424.2, -2518.39, -4424.2, -2749.57, -4669.03, -2518.39, -4697.01, -2645.3, -4669.03, -2749.57, -5194.82, -1790.96, -4299.78, -1926.61, -4323.42, -1929.61, -4485.78, -1929.61, -4712.2, -1947.39, -4957.03, -1947.39, -5194.82, -2487.72, -4485.78, -2133.98, -4753.63, -2189.73, -4770.42, -2385.98, -3258.55, -2878.04, -3258.33, -2872.96, -5138.98, -2872.96, -5238, -2886.95, -3256.82, -1732.53, -3256.82, -1754.79, -3222.47, -1754.79, -3206.46, -1732.09, -3222.47, -1790.96, -3256.82, -1790.96, -3256.82, -2491.72, -3380.72, -2041.19, -3380.72, -2718.2, -3419.41, -2718.2, -3419.41, -2712.76, -4089.56, -2712.76, -4089.56, -2680, -4087.41, -2680, -4087.41, -2672.31, -4245.84, -2672.31, -4245.84, -2645.16, -4882.54, -2645.3, -4882.54, -2637.73, -5030.08, -2637.73, -5138.98, -2836.79, -5030.08, -2437.49, -4882.54, -2437.49, -4882.54, -2435.48, -4932.78, -2385.98, -4229.69, -2529.48, -4087.41, -2529.48, -4087.41, -1980.05, -4048.72, -1997.2, -3818.92, -2037.19, -4048.72, -2037.19, -4048.72, -2680, -3419.41, -2680, -3629.38, -2041.19, -3419.41, -2041.19, -5230.44, -2487.72, -5230.44, -1790.96, -5238, -1790.96, -3256.69, -2836.79)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(8, 9, 10, 11, 12), PackedInt32Array(13, 14, 15, 16), PackedInt32Array(17, 18, 19, 20, 21), PackedInt32Array(10, 22, 23, 24, 25, 11), PackedInt32Array(26, 27, 19, 28), PackedInt32Array(29, 9, 30, 31), PackedInt32Array(30, 9, 8, 32), PackedInt32Array(32, 8, 33, 34), PackedInt32Array(19, 27, 35, 20), PackedInt32Array(36, 20, 35), PackedInt32Array(37, 36, 35, 38), PackedInt32Array(39, 38, 35, 40), PackedInt32Array(40, 35, 41, 15), PackedInt32Array(23, 36, 37, 24), PackedInt32Array(25, 24, 42, 14, 43), PackedInt32Array(42, 38, 39, 14), PackedInt32Array(43, 14, 13), PackedInt32Array(43, 13, 44, 12), PackedInt32Array(45, 46, 47, 48), PackedInt32Array(49, 50, 51, 52), PackedInt32Array(53, 54, 55), PackedInt32Array(28, 56, 57, 26), PackedInt32Array(58, 59, 60), PackedInt32Array(61, 62, 63, 64), PackedInt32Array(64, 65, 29, 31), PackedInt32Array(66, 67, 68, 69), PackedInt32Array(70, 71, 72, 73), PackedInt32Array(10, 74, 75, 76, 22), PackedInt32Array(21, 77, 17), PackedInt32Array(78, 79, 80, 81, 82), PackedInt32Array(81, 83, 82), PackedInt32Array(78, 82, 18, 17), PackedInt32Array(76, 21, 20), PackedInt32Array(76, 20, 22), PackedInt32Array(72, 8, 12, 44, 73), PackedInt32Array(84, 85, 86, 48), PackedInt32Array(84, 48, 47, 69, 41), PackedInt32Array(60, 61, 64, 31), PackedInt32Array(73, 16, 15, 41, 70), PackedInt32Array(68, 70, 41, 69), PackedInt32Array(34, 33, 66, 69), PackedInt32Array(55, 26, 57, 87), PackedInt32Array(34, 69, 87, 31), PackedInt32Array(60, 31, 87, 58), PackedInt32Array(57, 58, 87), PackedInt32Array(55, 87, 52, 53), PackedInt32Array(53, 52, 51)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-5248, -2897, -3249, -2888, -3196, -1722, -5248, -1740)])
+vertices = PackedVector2Array(-4697.01, -2435.48, -4363.63, -2437.73, -4229.69, -2437.73, -4158.08, -2156.16, -4309.99, -2156.16, -4340.3, -2165.09, -5230.44, -2487.72, -5230.44, -2448.22, -5237.82, -2886.95, -4340.3, -2009.25, -4309.99, -2015.98, -4158.08, -2015.98, -4087.41, -1980.05, -4215.51, -1684.2, -4327.69, -1656.16, -4461.63, -1656.16, -3379.92, -2001.2, -3379.92, -2041.19, -3292.44, -2491.72, -3292.44, -1201.96, -3517.4, -1469.48, -3517.4, -1612.31, -4363.63, -2645.16, -4424.2, -2518.39, -4424.2, -2749.57, -3706.84, -1469.48, -5194.82, -1201.96, -4062.69, -1440.73, -4669.03, -2518.39, -4697.01, -2645.3, -4669.03, -2749.57, -4087.41, -2529.48, -3818.92, -1997.2, -3629.38, -2001.2, -3706.84, -1612.31, -4043.58, -1684.2, -4048.72, -1980.05, -4757.2, -1522.39, -4461.63, -1448.73, -4489.81, -2009.25, -4757.2, -1753.57, -4717.73, -2026.86, -4229.69, -2529.48, -4489.81, -2165.09, -4717.73, -2202.25, -4882.54, -2435.48, -4978.22, -2202.25, -5030.08, -2437.49, -4043.58, -1492.95, -4196.63, -1492.95, -4196.63, -1440.73, -4327.69, -1448.73, -4215.51, -1492.95, -3258.93, -2878.04, -3258.9, -2872.96, -5138.98, -2872.96, -5138.98, -2836.79, -5194.82, -2487.72, -3248.11, -1201.96, -3256.82, -1201.96, -3256.82, -2491.72, -3258.67, -2836.79, -3380.72, -2718.2, -3380.72, -2041.19, -3419.41, -2718.2, -3419.41, -2712.76, -4089.56, -2712.76, -4089.56, -2680, -4087.41, -2680, -4087.41, -2672.31, -4245.84, -2672.31, -4245.84, -2645.16, -4882.54, -2645.3, -4882.54, -2637.73, -5030.08, -2637.73, -4882.54, -2437.49, -4048.72, -1997.2, -3818.92, -2037.19, -4048.72, -2037.19, -4048.72, -2680, -3419.41, -2680, -3629.38, -2041.19, -3419.41, -2041.19, -4062.69, -1492.95, -4978.22, -2026.86, -5002.03, -1753.57, -5002.03, -1522.39)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 8), PackedInt32Array(9, 10, 11, 12, 13, 14, 15), PackedInt32Array(16, 17, 18, 19), PackedInt32Array(16, 19, 20, 21), PackedInt32Array(22, 1, 23, 24), PackedInt32Array(25, 20, 19, 26, 27), PackedInt32Array(23, 1, 0, 28), PackedInt32Array(28, 0, 29, 30), PackedInt32Array(31, 12, 11, 3), PackedInt32Array(32, 33, 16, 21, 34, 35, 36), PackedInt32Array(37, 15, 38, 26), PackedInt32Array(39, 15, 37, 40, 41), PackedInt32Array(10, 9, 5, 4), PackedInt32Array(42, 31, 3, 2), PackedInt32Array(0, 5, 43, 44, 45), PackedInt32Array(43, 39, 41, 44), PackedInt32Array(45, 44, 46, 47), PackedInt32Array(48, 34, 25, 27), PackedInt32Array(34, 48, 35), PackedInt32Array(49, 50, 51, 52), PackedInt32Array(52, 51, 14, 13), PackedInt32Array(53, 54, 55, 8), PackedInt32Array(6, 8, 55, 56, 57), PackedInt32Array(58, 59, 60), PackedInt32Array(61, 58, 60), PackedInt32Array(61, 60, 18, 62), PackedInt32Array(17, 63, 62, 18), PackedInt32Array(56, 61, 62, 64), PackedInt32Array(56, 64, 65, 66, 24), PackedInt32Array(67, 68, 69, 70), PackedInt32Array(70, 71, 22, 24), PackedInt32Array(72, 73, 74, 56), PackedInt32Array(47, 75, 45), PackedInt32Array(36, 76, 32), PackedInt32Array(77, 78, 79, 80, 81), PackedInt32Array(80, 82, 81), PackedInt32Array(77, 81, 33, 32), PackedInt32Array(36, 35, 13, 12), PackedInt32Array(27, 83, 48), PackedInt32Array(66, 67, 70, 24), PackedInt32Array(39, 9, 15), PackedInt32Array(84, 41, 40, 85), PackedInt32Array(30, 29, 72, 56), PackedInt32Array(50, 27, 26), PackedInt32Array(51, 50, 26, 38), PackedInt32Array(86, 37, 26), PackedInt32Array(86, 26, 57, 85), PackedInt32Array(46, 84, 85, 57, 47), PackedInt32Array(74, 47, 57, 56), PackedInt32Array(30, 56, 24)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-5248, -2897, -3249, -2888, -3238, -1183, -5219, -1175)])
 
 [node name="UTB" type="Node2D"]
 position = Vector2(5296, 2964)
@@ -169,41 +170,36 @@ curve = SubResource("Curve2D_d0jk2")
 [node name="PokeGym" type="PathFollow2D" parent="Path2D"]
 unique_name_in_owner = true
 position = Vector2(-4822.3, -2444.42)
-rotation = -0.0276478
+rotation = -0.0276445
 progress = 377.339
 
 [node name="Garden" type="PathFollow2D" parent="Path2D"]
 unique_name_in_owner = true
-position = Vector2(-4366.14, -2513.32)
+position = Vector2(-4366.14, -2513.31)
 rotation = -0.242187
 progress = 841.288
 
 [node name="Saloon" type="PathFollow2D" parent="Path2D"]
 unique_name_in_owner = true
-position = Vector2(-4998.42, -2176.73)
-rotation = -3.12688
-progress = 2115.07
+position = Vector2(-5026.63, -2004.48)
+rotation = -2.39011
+progress = 2405.31
 
 [node name="Start" type="PathFollow2D" parent="Path2D"]
 unique_name_in_owner = true
 position = Vector2(-5199.5, -2433.99)
-rotation = -0.0276478
+rotation = -0.0276445
 
 [node name="player" parent="." instance=ExtResource("1_g8rec")]
-position = Vector2(-3845, -2313)
+position = Vector2(-3985, -2539)
+collision_layer = 2049
 
 [node name="MobSpawn" type="Node" parent="player"]
 script = ExtResource("6_a1li5")
 
 [node name="Timer" type="Timer" parent="player/MobSpawn"]
-wait_time = 2.065
+wait_time = 4.714
 autostart = true
-
-[node name="Townmap" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(-4320.87, -2118.5)
-scale = Vector2(1.87865, 1.72813)
-texture = ExtResource("2_yr6jb")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 visible = false
@@ -212,6 +208,7 @@ tile_map_data = PackedByteArray("AAC1/lL/AQAAAAQAAAC1/lf/AQADAAIAAAC1/mL/AQAAAAA
 tile_set = SubResource("TileSet_og1er")
 
 [node name="NavigationRegionFlurp" type="NavigationRegion2D" parent="."]
+visible = false
 position = Vector2(-76, -98)
 navigation_polygon = SubResource("NavigationPolygon_l2rmo")
 
@@ -225,10 +222,6 @@ scale = Vector2(1.10772, 1.07284)
 position = Vector2(-4860, -2624)
 scale = Vector2(1.25401, 1.1299)
 
-[node name="House4" parent="NavigationRegionFlurp/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-4735, -2376)
-scale = Vector2(0.863229, 1.11561)
-
 [node name="House11" parent="NavigationRegionFlurp/walls" instance=ExtResource("7_qpt6a")]
 position = Vector2(-4443, -1635)
 scale = Vector2(0.863229, 1.11561)
@@ -236,10 +229,6 @@ scale = Vector2(0.863229, 1.11561)
 [node name="House12" parent="NavigationRegionFlurp/walls" instance=ExtResource("7_qpt6a")]
 position = Vector2(-4178, -1627)
 scale = Vector2(0.863229, 1.11561)
-
-[node name="House13" parent="NavigationRegionFlurp/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-3868, -1608)
-scale = Vector2(1.28317, 0.955034)
 
 [node name="House14" parent="NavigationRegionFlurp/walls" instance=ExtResource("7_qpt6a")]
 position = Vector2(-3684, -1595)
@@ -270,7 +259,7 @@ position = Vector2(-4975, -2862)
 scale = Vector2(15.3978, 0.0962516)
 
 [node name="House27" parent="NavigationRegionFlurp/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-5111, -1780)
+position = Vector2(-5094, -1191)
 scale = Vector2(15.3978, 0.0962516)
 
 [node name="House26" parent="NavigationRegionFlurp/walls" instance=ExtResource("7_qpt6a")]
@@ -289,10 +278,6 @@ scale = Vector2(1.73833, 0.118978)
 position = Vector2(-3602, -2030)
 scale = Vector2(1.73833, 0.118978)
 
-[node name="House15" parent="NavigationRegionFlurp/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-3988, -1643)
-scale = Vector2(1.27233, 0.994733)
-
 [node name="House16" parent="NavigationRegionFlurp/walls" instance=ExtResource("7_qpt6a")]
 position = Vector2(-4194, -1664)
 scale = Vector2(1.15101, 1.01933)
@@ -301,143 +286,47 @@ scale = Vector2(1.15101, 1.01933)
 position = Vector2(-4345, -2624)
 scale = Vector2(0.863229, 1.11561)
 
-[node name="House3" parent="NavigationRegionFlurp/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-4912, -2365)
-scale = Vector2(1.07848, 1.09743)
-
 [node name="House7" parent="NavigationRegionFlurp/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-4465, -2113)
-scale = Vector2(1.07848, 1.09743)
+position = Vector2(-4470, -2147)
+scale = Vector2(0.981185, 0.808553)
 
 [node name="House8" parent="NavigationRegionFlurp/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-4279, -2110)
-scale = Vector2(1.07848, 1.09743)
+position = Vector2(-4290, -2139)
+scale = Vector2(0.999381, 0.715359)
 
 [node name="House5" parent="NavigationRegionFlurp/walls" instance=ExtResource("7_qpt6a")]
 position = Vector2(-4642, -2727)
 scale = Vector2(1.70334, 1.25701)
 
 [node name="House9" parent="NavigationRegionFlurp/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-4930, -2156)
-scale = Vector2(1.70334, 1.25701)
+position = Vector2(-4950, -2183)
+scale = Vector2(1.82186, 0.924957)
 
 [node name="House10" parent="NavigationRegionFlurp/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-4969, -1674)
+position = Vector2(-4975, -1731)
 scale = Vector2(1.70334, 1.25701)
 
-[node name="NavigationRegionGalump" type="NavigationRegion2D" parent="."]
-position = Vector2(-76, -98)
-navigation_polygon = SubResource("NavigationPolygon_l2rmo")
-navigation_layers = 2
+[node name="Carpark" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-4922, -1966)
 
-[node name="walls" type="Node2D" parent="NavigationRegionGalump"]
+[node name="Market" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-3570, -1906)
 
-[node name="House" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-5009, -2617)
-scale = Vector2(1.10772, 1.07284)
+[node name="Home" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-5212, -2523)
 
-[node name="House2" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-4860, -2624)
-scale = Vector2(1.25401, 1.1299)
+[node name="Townmap" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-4320.87, -2118.5)
+scale = Vector2(1.87865, 1.72813)
+texture = ExtResource("2_yr6jb")
 
-[node name="House4" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-4735, -2376)
-scale = Vector2(0.863229, 1.11561)
-
-[node name="House11" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-4443, -1635)
-scale = Vector2(0.863229, 1.11561)
-
-[node name="House12" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-4178, -1627)
-scale = Vector2(0.863229, 1.11561)
-
-[node name="House13" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-3868, -1608)
-scale = Vector2(1.28317, 0.955034)
-
-[node name="House14" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-3684, -1595)
-scale = Vector2(1.28363, 0.73116)
-
-[node name="House17" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-4223, -2655)
-scale = Vector2(1.28363, 0.73116)
-
-[node name="House18" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-4076, -2641)
-scale = Vector2(0.14165, 4.11996)
-
-[node name="House19" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-3408, -2667)
-scale = Vector2(0.14165, 4.11996)
-
-[node name="House20" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-5206, -2375)
-scale = Vector2(-0.118337, 10.2719)
-
-[node name="House21" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-3268, -2379)
-scale = Vector2(-0.118337, 10.2719)
-
-[node name="House22" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-4975, -2862)
-scale = Vector2(15.3978, 0.0962516)
-
-[node name="House27" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-5111, -1780)
-scale = Vector2(15.3978, 0.0962516)
-
-[node name="House26" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-4975, -2862)
-scale = Vector2(15.3978, 0.0962516)
-
-[node name="House23" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-4028, -2702)
-scale = Vector2(5.15605, 0.0759398)
-
-[node name="House24" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-4041, -2026)
-scale = Vector2(1.73833, 0.118978)
-
-[node name="House25" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-3602, -2030)
-scale = Vector2(1.73833, 0.118978)
-
-[node name="House15" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-3988, -1643)
-scale = Vector2(1.27233, 0.994733)
-
-[node name="House16" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-4194, -1664)
-scale = Vector2(1.15101, 1.01933)
-
-[node name="House6" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-4345, -2624)
-scale = Vector2(0.863229, 1.11561)
-
-[node name="House3" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-4912, -2365)
-scale = Vector2(1.07848, 1.09743)
-
-[node name="House7" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-4465, -2113)
-scale = Vector2(1.07848, 1.09743)
-
-[node name="House8" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-4279, -2110)
-scale = Vector2(1.07848, 1.09743)
-
-[node name="House5" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-4642, -2727)
-scale = Vector2(1.70334, 1.25701)
-
-[node name="House9" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-4930, -2156)
-scale = Vector2(1.70334, 1.25701)
-
-[node name="House10" parent="NavigationRegionGalump/walls" instance=ExtResource("7_qpt6a")]
-position = Vector2(-4969, -1674)
-scale = Vector2(1.70334, 1.25701)
+[node name="HomeArea" parent="." instance=ExtResource("7_1qstf")]
+position = Vector2(-5222, -2533)
+collision_layer = 0
+collision_mask = 2048
 
 [connection signal="timeout" from="player/MobSpawn/Timer" to="player/MobSpawn" method="_on_timer_timeout"]

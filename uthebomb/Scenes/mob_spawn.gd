@@ -1,24 +1,32 @@
 extends Node
 
-func spawn_mob_flurp():
-	var new_flurp = load("res://Scenes/SmartFlurp.tscn").instantiate()
-	new_flurp.global_position = %PokeGym.global_position
-	add_child(new_flurp)
-	
-	
-func spawn_mob_Galump():
-	var new_galump = load("res://Scenes/SmartGalump.tscn").instantiate()
-	new_galump.global_position = %Saloon.global_position
-	add_child(new_galump)
-	
-func spawn_mob_Galump2():
-	var new_galump = load("res://Scenes/SmartGalump.tscn").instantiate()
-	new_galump.global_position = %Garden.global_position
-	add_child(new_galump)
-	
+var mob_types = [
+	preload("res://Scenes/SmartFlurp.tscn"),
+	preload("res://Scenes/SmartFlurp2.tscn"),
+	preload("res://Scenes/SmartGalump.tscn"),
+	preload("res://Scenes/SmartGalump2.tscn")
+] 
 
+
+func spawn_mob_saloon():
+	var mob_scene = mob_types.pick_random()
+	var new_mob = mob_scene.instantiate()
+	new_mob.global_position = %Saloon.global_position
+	add_child(new_mob)
+
+func spawn_mob_pokegym():
+	var mob_scene = mob_types.pick_random()
+	var new_mob = mob_scene.instantiate()
+	new_mob.global_position = %PokeGym.global_position
+	add_child(new_mob)
+	
+func spawn_mob_garden():
+	var mob_scene = mob_types.pick_random()
+	var new_mob = mob_scene.instantiate()
+	new_mob.global_position = %Garden.global_position
+	add_child(new_mob)
 
 func _on_timer_timeout() -> void:
-	spawn_mob_flurp()
-	spawn_mob_Galump()
-	spawn_mob_Galump2()
+	spawn_mob_saloon()
+	spawn_mob_pokegym()
+	spawn_mob_garden()

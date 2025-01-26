@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://2u7876a0b3d7"]
+
+[ext_resource type="Script" path="res://Scripts/Homeflurp.gd" id="1_fwfft"]
+[ext_resource type="Texture2D" uid="uid://cb5xqy4ef8yxb" path="res://Sprites/Flurp2.png" id="2_osa6d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8yqsx"]
+radius = 12.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(0, 2)
+collision_layer = 2051
+script = ExtResource("1_fwfft")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 1)
+shape = SubResource("CircleShape2D_8yqsx")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="Flurp2" type="Sprite2D" parent="."]
+position = Vector2(7, -14)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_osa6d")

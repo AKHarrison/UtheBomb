@@ -1,15 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5l50wehtye2x"]
+[gd_scene load_steps=4 format=3 uid="uid://duwhobs4r8dpy"]
 
-[ext_resource type="Script" path="res://Scripts/SmartflurpHome.gd" id="1_k32d4"]
-[ext_resource type="Texture2D" uid="uid://bx1l8os17j05y" path="res://Sprites/Player/Flurp -sp.png" id="2_we1t4"]
+[ext_resource type="Script" path="res://Scripts/Homeflurp.gd" id="1_6hfgc"]
+[ext_resource type="Texture2D" uid="uid://bx1l8os17j05y" path="res://Sprites/Player/Flurp -sp.png" id="2_go05d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8yqsx"]
 radius = 12.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(0, 2)
-collision_layer = 3
-script = ExtResource("1_k32d4")
+collision_layer = 2051
+script = ExtResource("1_6hfgc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 1)
@@ -18,6 +18,6 @@ shape = SubResource("CircleShape2D_8yqsx")
 [node name="Flurp-sp" type="Sprite2D" parent="."]
 position = Vector2(4, -9)
 scale = Vector2(0.359375, 0.359375)
-texture = ExtResource("2_we1t4")
+texture = ExtResource("2_go05d")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
