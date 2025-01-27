@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c72texhmapq10"]
+
+[ext_resource type="Script" path="res://Scripts/Homeflurp.gd" id="1_kwj8h"]
+[ext_resource type="Texture2D" uid="uid://dk1ye3fsbcoks" path="res://Sprites/Galump -sp.png" id="2_0bcwj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8yqsx"]
+radius = 12.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(0, 2)
+collision_layer = 35843
+script = ExtResource("1_kwj8h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 1)
+shape = SubResource("CircleShape2D_8yqsx")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="Galump-sp" type="Sprite2D" parent="."]
+position = Vector2(4, -17)
+scale = Vector2(0.4375, 0.4375)
+texture = ExtResource("2_0bcwj")

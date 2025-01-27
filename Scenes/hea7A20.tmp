@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://by1j0k32qt37d"]
+
+[ext_resource type="Script" path="res://Scripts/Player/head.gd" id="1_0bg3h"]
+[ext_resource type="Texture2D" uid="uid://cerpwbnu0svvp" path="res://Sprites/Player/Player head.png" id="2_5k8de"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jkhms"]
+radius = 725.243
+
+[node name="Head" type="Area2D"]
+rotation = 0.138066
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_0bg3h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+rotation = 2.83429
+shape = SubResource("CircleShape2D_jkhms")
+
+[node name="HeadPivot" type="Marker2D" parent="."]
+position = Vector2(-4.43198, -3.5153)
+rotation = -1.92285
+
+[node name="PlayerHead" type="Sprite2D" parent="HeadPivot"]
+position = Vector2(160.53, 37.8594)
+rotation = 1.78571
+scale = Vector2(0.88201, 0.862087)
+texture = ExtResource("2_5k8de")
+
+[node name="Mouth" type="Marker2D" parent="HeadPivot/PlayerHead"]
+unique_name_in_owner = true
+position = Vector2(-6.02876, 71.4076)
+rotation = -1.58504

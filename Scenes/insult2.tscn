@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://0072nygmfnb5"]
+
+[ext_resource type="Script" path="res://Scripts/insult_divvy.gd" id="1_ccxwq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_soptf"]
+radius = 6.08276
+
+[node name="DIVVY" type="Area2D"]
+top_level = true
+position = Vector2(2.98023e-08, -1)
+rotation = 0.825333
+collision_layer = 65536
+collision_mask = 65539
+script = ExtResource("1_ccxwq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = -6.27116
+shape = SubResource("CircleShape2D_soptf")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.9704
+offset_top = 6.49927
+offset_right = 173.03
+offset_bottom = 103.499
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.818861
+theme_override_colors/font_color = Color(0.807843, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "DIVVY"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

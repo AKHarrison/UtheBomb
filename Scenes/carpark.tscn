@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://djx7ehi7k772e"]
+
+[ext_resource type="Script" path="res://Scenes/home.gd" id="1_8k4ha"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_57ojt"]
+radius = 74.0068
+
+[node name="CarparkArea" type="Area2D"]
+collision_layer = 0
+collision_mask = 1024
+script = ExtResource("1_8k4ha")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_57ojt")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

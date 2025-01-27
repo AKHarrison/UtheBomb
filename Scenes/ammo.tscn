@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://0ea4dqoqfpjo"]
+
+[ext_resource type="Texture2D" uid="uid://dt4p8iqb4xwt" path="res://Sprites/Player/fickle pickle -sp.png" id="1_epflp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_soptf"]
+radius = 27.0
+
+[node name="ammo" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_soptf")
+
+[node name="FicklePickle-sp" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+texture = ExtResource("1_epflp")

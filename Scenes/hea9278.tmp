@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://be3epaxuoavp8"]
+
+[ext_resource type="Script" path="res://Scripts/Player/head.gd" id="1_45jya"]
+[ext_resource type="Texture2D" uid="uid://cerpwbnu0svvp" path="res://Sprites/Player/Player head.png" id="1_ykk6g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7nu7t"]
+radius = 2505.06
+
+[node name="Head2" type="Area2D"]
+rotation = 0.0280822
+collision_layer = 0
+collision_mask = 6
+script = ExtResource("1_45jya")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7nu7t")
+
+[node name="headpivot" type="Marker2D" parent="."]
+position = Vector2(0, -2.38419e-07)
+scale = Vector2(1, 1)
+
+[node name="PlayerHead" type="Sprite2D" parent="headpivot"]
+position = Vector2(0.0561574, 1.99922)
+rotation = -0.0228455
+scale = Vector2(0.845703, 0.835938)
+texture = ExtResource("1_ykk6g")
+
+[node name="Mouth" type="Marker2D" parent="headpivot/PlayerHead"]
+unique_name_in_owner = true
+position = Vector2(4.09839, 106.447)
+rotation = -3.12256
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

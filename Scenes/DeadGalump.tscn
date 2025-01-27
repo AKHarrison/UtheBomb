@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://3akq1anwqa30"]
+
+[ext_resource type="Texture2D" uid="uid://dk1ye3fsbcoks" path="res://Sprites/Galump -sp.png" id="1_8eqld"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8yqsx"]
+radius = 12.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(0, 2)
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 1)
+shape = SubResource("CircleShape2D_8yqsx")
+
+[node name="Galump-sp" type="Sprite2D" parent="."]
+position = Vector2(4, -21)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_8eqld")

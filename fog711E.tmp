@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1d8yox5ehtvo"]
+
+[ext_resource type="Texture2D" uid="uid://dnpo3dg7a30r5" path="res://Sprites/Light.png" id="1_1y4qn"]
+[ext_resource type="Script" path="res://Scripts/fog.gd" id="1_eqnsx"]
+
+[node name="Fog" type="Node2D"]
+script = ExtResource("1_eqnsx")
+
+[node name="Light" type="Sprite2D" parent="."]
+texture = ExtResource("1_1y4qn")
+centered = false
