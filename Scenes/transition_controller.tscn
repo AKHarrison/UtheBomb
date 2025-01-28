@@ -1,0 +1,82 @@
+[gd_scene load_steps=6 format=3 uid="uid://db55shd6r4e0i"]
+
+[ext_resource type="Script" path="res://Scenes/transition_controller.gd" id="1_eeq6t"]
+
+[sub_resource type="Animation" id="Animation_cu543"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_41bhi"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_27kky"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wcdoq"]
+_data = {
+"RESET": SubResource("Animation_cu543"),
+"fade_in": SubResource("Animation_41bhi"),
+"fade_out": SubResource("Animation_27kky")
+}
+
+[node name="TransitionController" type="Control" node_paths=PackedStringArray("background", "animation_player")]
+layout_mode = 3
+anchor_right = 25.254
+anchor_bottom = 23.457
+offset_right = -28083.6
+offset_bottom = -14259.1
+scale = Vector2(28.8328, 16.1535)
+script = ExtResource("1_eeq6t")
+background = NodePath("ColorRect")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(28.8262, 16.1733)
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../ColorRect")
+libraries = {
+"": SubResource("AnimationLibrary_wcdoq")
+}

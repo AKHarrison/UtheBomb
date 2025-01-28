@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=3 uid="uid://cpqft1x7c7l2f"]
+
+[ext_resource type="Script" path="res://Scripts/shelter.gd" id="1_m0128"]
+[ext_resource type="PackedScene" uid="uid://bd4voci66de7x" path="res://Scenes/total_time.tscn" id="2_go2w7"]
+[ext_resource type="Texture2D" uid="uid://cgo441hv1dvv1" path="res://Sprites/shelter.png" id="2_okcjy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1x1be"]
+size = Vector2(35, 30)
+
+[sub_resource type="FontVariation" id="FontVariation_bipjj"]
+
+[node name="Shelter" type="Area2D"]
+collision_layer = 0
+collision_mask = 129
+script = ExtResource("1_m0128")
+
+[node name="TotalTime" parent="." instance=ExtResource("2_go2w7")]
+unique_name_in_owner = true
+visible = false
+
+[node name="Shelter" type="Sprite2D" parent="."]
+position = Vector2(97, 75)
+texture = ExtResource("2_okcjy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(98.5, 105)
+shape = SubResource("RectangleShape2D_1x1be")
+
+[node name="YaWun" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="YaWun"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.819608, 0.698039, 0.176471, 0.658824)
+
+[node name="Label" type="Label" parent="YaWun"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -302.0
+offset_top = -90.0
+offset_right = 822.0
+offset_bottom = 239.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 146
+text = "Ya Wun"
+
+[node name="Label2" type="Label" parent="YaWun"]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -696.0
+offset_top = -212.0
+offset_right = 65.0
+offset_bottom = 169.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.732402, 1, 0.707756, 1)
+theme_override_constants/shadow_offset_x = -1
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = SubResource("FontVariation_bipjj")
+theme_override_font_sizes/font_size = 57
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

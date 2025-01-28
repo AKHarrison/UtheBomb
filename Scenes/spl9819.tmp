@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7y7c6pn6kkdr"]
+
+[ext_resource type="Script" path="res://Scenes/splash_scene_manager.gd" id="1_luufs"]
+[ext_resource type="PackedScene" uid="uid://dltnhmaohgtkr" path="res://Scenes/main_menu.tscn" id="2_6qu1a"]
+[ext_resource type="Texture2D" uid="uid://bshkncugs7ej7" path="res://Sprites/Player/utb logo.png" id="2_o40wg"]
+[ext_resource type="Texture2D" uid="uid://hlbidlki0ads" path="res://Sprites/Player/logo_small_monochrome_dark640.png" id="3_e3lai"]
+
+[node name="SplashSceneManager" type="Control" node_paths=PackedStringArray("splash_screen_container")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_luufs")
+load_scene = ExtResource("2_6qu1a")
+in_time = null
+fade_in_time = null
+pause_time = null
+fade_out_time = null
+out_time = null
+splash_screen_container = NodePath("ColorRect/CenterContainer")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 28.749
+anchor_bottom = 16.144
+offset_right = 2.04004
+offset_bottom = 4.23999
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("3_e3lai")
+
+[node name="UTB Logo" type="TextureRect" parent="ColorRect/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("2_o40wg")

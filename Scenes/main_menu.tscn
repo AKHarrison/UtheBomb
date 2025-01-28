@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://dltnhmaohgtkr"]
+
+[ext_resource type="Theme" uid="uid://cfn20af484k6g" path="res://themes/button.tres" id="1_17ns6"]
+[ext_resource type="Theme" uid="uid://p7nsg5h7tqe1" path="res://themes/menu_theme.tres" id="2_khfv3"]
+[ext_resource type="Theme" uid="uid://b4be48otlkkba" path="res://themes/menu_label.tres" id="3_15mfs"]
+[ext_resource type="Script" path="res://Scenes/button.gd" id="4_s3h0t"]
+
+[node name="CenterContainer" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+theme = ExtResource("1_17ns6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme = ExtResource("2_khfv3")
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_15mfs")
+text = "Main Menu"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_15mfs")
+text = "New Game"
+script = ExtResource("4_s3h0t")
+
+[node name="Button2" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_15mfs")
+text = "Continue"
+
+[node name="Button3" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_15mfs")
+text = "Quit"
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Button" to="PanelContainer/VBoxContainer/Button" method="_on_pressed"]
