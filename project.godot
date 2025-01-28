@@ -11,8 +11,9 @@ config_version=5
 [application]
 
 config/name="UtheBomb"
-run/main_scene="res://Scenes/utb.tscn"
+run/main_scene="res://Scenes/splash_scene_manager.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
+boot_splash/show_image=false
 config/icon="res://icon.png"
 
 [autoload]

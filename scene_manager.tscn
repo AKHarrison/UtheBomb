@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3jy7ff37hmib"]
+
+[ext_resource type="Script" path="res://scene_manager.gd" id="1_koh7e"]
+[ext_resource type="PackedScene" uid="uid://b7y7c6pn6kkdr" path="res://Scenes/splash_scene_manager.tscn" id="2_llhg6"]
+
+[node name="SceneManager" type="Node" node_paths=PackedStringArray("world_2d", "gui")]
+script = ExtResource("1_koh7e")
+world_2d = NodePath("World2d")
+gui = NodePath("GUI")
+
+[node name="World2d" type="Node2D" parent="."]
+
+[node name="GUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SplashSceneManager" parent="GUI" instance=ExtResource("2_llhg6")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
