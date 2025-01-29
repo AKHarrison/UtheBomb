@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cfn20af484k6g"]
+
+[ext_resource type="StyleBox" uid="uid://dmq67aey50fxu" path="res://themes/panelcontainer_box_flat.tres" id="1_hctxt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ngqh0"]
+
+[resource]
+Button/styles/normal = SubResource("StyleBoxFlat_ngqh0")
+PanelContainer/styles/normal = null
+PanelContainer/styles/panel = ExtResource("1_hctxt")

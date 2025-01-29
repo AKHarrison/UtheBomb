@@ -1,0 +1,42 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://b4be48otlkkba"]
+
+[ext_resource type="StyleBox" uid="uid://dmq67aey50fxu" path="res://themes/panelcontainer_box_flat.tres" id="1_aabvy"]
+
+[sub_resource type="SystemFont" id="SystemFont_j14jw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ngqh0"]
+content_margin_left = 6.0
+content_margin_top = 5.0
+content_margin_right = 6.0
+content_margin_bottom = 5.0
+bg_color = Color(0.90721, 0.305433, 0.269647, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xa1ef"]
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0, 0.715324, 0.39884, 0.941176)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[resource]
+Button/fonts/font = SubResource("SystemFont_j14jw")
+Button/styles/normal = SubResource("StyleBoxFlat_ngqh0")
+Label/font_sizes/font_size = 26
+Label/styles/normal = SubResource("StyleBoxFlat_xa1ef")
+PanelContainer/styles/normal = null
+PanelContainer/styles/panel = ExtResource("1_aabvy")
