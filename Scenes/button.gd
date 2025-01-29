@@ -8,4 +8,4 @@ func _ready() -> void:
 
 
 func _on_pressed() -> void:
-	GlobalAutoload.scene_manager.change_gui_scene("res://Scenes/utb.tscn")
+	get_tree().change_scene_to_file("res://Scenes/utb.tscn")

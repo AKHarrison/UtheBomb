@@ -17,7 +17,7 @@ func fade() -> void:
 	tween.tween_interval(in_time)
 	tween.tween_property(splash_screen, "modulate:a", 1.0, fade_in_time)
 	tween.tween_interval(pause_time)
-	tween.tween_property(splash_screen, "modulate:a", 0.0, fade_out_time)
+	tween.tween_property(splash_screen, "modulate:a", 1.0, fade_out_time)
 	tween.tween_interval(out_time)
 	await tween.finished
 	get_tree().change_scene_to_packed(load_scene)

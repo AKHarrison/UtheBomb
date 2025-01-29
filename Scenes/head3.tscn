@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://s5lu8j5dhcc4"]
+
+[ext_resource type="Script" path="res://Scripts/Player/head.gd" id="1_n77ho"]
+[ext_resource type="Texture2D" uid="uid://36cwyelvfsee" path="res://Sprites/Player/head.PNG" id="2_mfr8y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4nfl"]
+radius = 93.0215
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 0
+collision_mask = 6
+script = ExtResource("1_n77ho")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_g4nfl")
+
+[node name="Marker2D" type="Marker2D" parent="CollisionShape2D"]
+
+[node name="Mouth" type="Marker2D" parent="CollisionShape2D/Marker2D"]
+unique_name_in_owner = true
+position = Vector2(-9.31323e-10, 3)
+rotation = 1.56711
+
+[node name="Head" type="Sprite2D" parent="."]
+texture_filter = 5
+rotation = -0.00368391
+texture = ExtResource("2_mfr8y")

@@ -5,7 +5,7 @@
 [ext_resource type="Theme" uid="uid://b4be48otlkkba" path="res://themes/menu_label.tres" id="3_15mfs"]
 [ext_resource type="Script" path="res://Scenes/button.gd" id="4_s3h0t"]
 
-[node name="CenterContainer" type="CenterContainer"]
+[node name="Main Menu" type="CenterContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

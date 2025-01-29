@@ -24,10 +24,11 @@ func _physics_process(delta):
 	var enemies_in_range = get_overlapping_bodies()
 	if enemies_in_range.size() > 0:
 		var target_enemy = enemies_in_range.front()
+		var target_position = target_enemy.global_position
 		look_at(target_enemy.global_position)
-		#GlobalAutoload.timer.paused = false
-	#else: 
-		#GlobalAutoload.timer.paused = true
+		
+		var angle_to_target = (target_position - global_position).angle()  		# Calculate the angle between the current position and the target
+		rotation = lerp_angle(rotation, angle_to_target, delta * 5)   # ensures smoother roatation through interpolation can adjuust r
 
 	
 func insult_twat():

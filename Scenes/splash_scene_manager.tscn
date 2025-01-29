@@ -11,7 +11,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_luufs")
 load_scene = ExtResource("2_6qu1a")
-splash_screen = NodePath("ColorRect/CenterContainer/UTB Logo")
+splash_screen = NodePath("")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -32,6 +32,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="UTB Logo" type="TextureRect" parent="ColorRect/CenterContainer"]
+[node name="UTB Logo2" type="TextureRect" parent="ColorRect/CenterContainer"]
 layout_mode = 2
 texture = ExtResource("2_o40wg")

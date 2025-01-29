@@ -6,7 +6,7 @@ var health = 3
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
 @onready var dead_flurp = preload("res://Scenes/DeadFlurp.tscn")
 @onready var home_flurp = preload("res://Scenes/HomeFlurp.tscn")
-@onready	 var target_to_chase = get_node("/root/UTB/player")
+@onready var target_to_chase = get_node("/root/Game/UTB/player") 
 @onready var start: PathFollow2D = %Start
 
 

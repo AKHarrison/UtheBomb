@@ -1,7 +1,8 @@
-[gd_scene load_steps=22 format=4 uid="uid://dg5igh56smjen"]
+[gd_scene load_steps=23 format=4 uid="uid://dg5igh56smjen"]
 
 [ext_resource type="PackedScene" uid="uid://b0mr5w6gbkhup" path="res://Scenes/player.tscn" id="1_g8rec"]
 [ext_resource type="Script" path="res://Scripts/utb.gd" id="1_nv40r"]
+[ext_resource type="PackedScene" uid="uid://dltnhmaohgtkr" path="res://Scenes/main_menu.tscn" id="1_q8tjw"]
 [ext_resource type="Texture2D" uid="uid://drbfq3yw2dqb3" path="res://Sprites/townmap.jpg" id="2_yr6jb"]
 [ext_resource type="Texture2D" uid="uid://cbwnrigdbqr3u" path="res://Sprites/Untitled.png" id="4_w0fen"]
 [ext_resource type="Script" path="res://Scenes/mob_spawn.gd" id="6_a1li5"]
@@ -170,7 +171,15 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-5248, -2897, -3249, -2
 blend_mode = 3
 
 [node name="Game" type="Node2D"]
+z_index = -3
+texture_filter = 5
 position = Vector2(5296, 2964)
+
+[node name="CenterContainer" parent="." instance=ExtResource("1_q8tjw")]
+offset_left = -180.0
+offset_top = -117.5
+offset_right = 180.0
+offset_bottom = 117.5
 
 [node name="UTB" type="Node2D" parent="." node_paths=PackedStringArray("player")]
 script = ExtResource("1_nv40r")
@@ -213,7 +222,7 @@ collision_layer = 2049
 script = ExtResource("6_a1li5")
 
 [node name="Timer" type="Timer" parent="UTB/player/MobSpawn"]
-wait_time = 4.935
+wait_time = 16.61
 autostart = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="UTB"]
@@ -350,6 +359,7 @@ scale = Vector2(1.87865, 1.72813)
 texture = ExtResource("2_yr6jb")
 
 [node name="Fog" type="Sprite2D" parent="UTB"]
+texture_filter = 6
 material = SubResource("CanvasItemMaterial_e5x0x")
 position = Vector2(-5295, -2964)
 texture = ExtResource("14_ogy08")

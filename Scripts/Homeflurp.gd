@@ -3,9 +3,9 @@ extends CharacterBody2D
 
   # Reference to the Flurp2D sprite
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
-@onready	 var home_point = get_node("/root/UTB/Home")
-@onready	 var carpark_point = get_node("/root/UTB/Carpark")
-@onready	 var market_point = get_node("/root/UTB/Market")
+@onready	 var home_point = get_node("/root/Game/UTB/Home")
+@onready	 var carpark_point = get_node("/root/Game/UTB/Carpark")
+@onready	 var market_point = get_node("/root/Game/UTB/Market")
 
 
 const SPEED = 45.0
