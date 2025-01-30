@@ -5,7 +5,7 @@ extends CharacterBody2D
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
 @onready	 var home_point = get_node("/root/Game/UTB/Home")
 @onready	 var carpark_point = get_node("/root/Game/UTB/Carpark")
-@onready	 var market_point = get_node("/root/Game/UTB/Market")
+@onready	 var market_point = get_node("/root//GameUTB/Market")
 
 
 const SPEED = 45.0
@@ -45,9 +45,10 @@ func mob_return():
 	elif my_random_number == 0:
 		return_carpark()
 
+
 	elif my_random_number == -1:
 		return_market()
-		
+	
 func despawn():
 	queue_free()
 
