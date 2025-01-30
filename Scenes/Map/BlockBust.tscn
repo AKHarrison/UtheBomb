@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://db3n2ox1nlesh"]
+
+[ext_resource type="Texture2D" uid="uid://crlocd0w0dn8t" path="res://Sprites/BlockBust.PNG" id="1_eah51"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xwba"]
+size = Vector2(174, 156)
+
+[node name="BlockBust" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_1xwba")
+
+[node name="BlockBust" type="Sprite2D" parent="."]
+scale = Vector2(1.04521, 1.04521)
+texture = ExtResource("1_eah51")

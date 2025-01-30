@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://8xiqwjsoggc4"]
+
+[ext_resource type="Texture2D" uid="uid://bctmnsocg8vj3" path="res://Sprites/Buildings side rough.png" id="1_34vnj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xwba"]
+size = Vector2(50, 333)
+
+[node name="Nice Terrace 1" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 9.5)
+shape = SubResource("RectangleShape2D_1xwba")
+
+[node name="BuildingsSideRough" type="Sprite2D" parent="."]
+texture = ExtResource("1_34vnj")

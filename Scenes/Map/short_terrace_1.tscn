@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bi67b0boskhnh"]
+
+[ext_resource type="Texture2D" uid="uid://bxjynxblr18b" path="res://Sprites/ShortTerr.PNG" id="1_8ckwg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xwba"]
+size = Vector2(142, 101)
+
+[node name="Short Terrace 1" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-55, 0.5)
+shape = SubResource("RectangleShape2D_1xwba")
+
+[node name="ShortTerr" type="Sprite2D" parent="."]
+position = Vector2(-28, 3)
+texture = ExtResource("1_8ckwg")

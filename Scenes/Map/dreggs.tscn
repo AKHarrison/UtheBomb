@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccfi2s6qtar7x"]
+
+[ext_resource type="Texture2D" uid="uid://78nh6lpy21jp" path="res://Sprites/Player/dreggs.PNG" id="1_o5x1m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xwba"]
+size = Vector2(219, 243)
+
+[node name="BlockBust" type="StaticBody2D"]
+scale = Vector2(0.717433, 0.717433)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, -20.5)
+shape = SubResource("RectangleShape2D_1xwba")
+
+[node name="Dreggs" type="Sprite2D" parent="."]
+position = Vector2(-1, -9)
+scale = Vector2(1.26966, 1.26966)
+texture = ExtResource("1_o5x1m")

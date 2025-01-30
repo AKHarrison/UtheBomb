@@ -20,12 +20,10 @@ shape = SubResource("CircleShape2D_o6ifv")
 texture_filter = 5
 position = Vector2(-2.91038e-11, -1)
 rotation = -0.0128708
-scale = Vector2(1, 1)
 texture = ExtResource("2_gygrd")
 
 [node name="HeadPivot" type="Marker2D" parent="."]
 rotation = -0.000288486
-scale = Vector2(1, 1)
 
 [node name="Mouth" type="Marker2D" parent="HeadPivot"]
 unique_name_in_owner = true

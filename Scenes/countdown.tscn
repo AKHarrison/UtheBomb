@@ -1,23 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2a22ymp85i2b"]
+[gd_scene load_steps=5 format=3 uid="uid://c2a22ymp85i2b"]
 
 [ext_resource type="Script" path="res://Scripts/countdown.gd" id="1_lck1h"]
+[ext_resource type="FontFile" uid="uid://cchjmdwuh3kfb" path="res://Scenes/digital-7-font/Digital7Mono-Yz9J4.ttf" id="2_r1grg"]
+[ext_resource type="FontFile" uid="uid://ccgaj18xx0ryr" path="res://Scenes/Digital7Mono-Yz9J4.ttf" id="3_x5q7l"]
 
-[sub_resource type="FontVariation" id="FontVariation_b2djl"]
+[sub_resource type="Theme" id="Theme_157sh"]
+default_font = ExtResource("2_r1grg")
 
 [node name="Countdown" type="Node2D"]
 script = ExtResource("1_lck1h")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -36.0
-offset_top = -249.0
-offset_right = 725.0
-offset_bottom = 132.0
-theme_override_colors/font_color = Color(0.984314, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.732402, 1, 0.707756, 1)
+texture_filter = 2
+offset_left = -34.0
+offset_top = -190.0
+offset_right = 727.0
+offset_bottom = 191.0
+theme = SubResource("Theme_157sh")
+theme_override_colors/font_color = Color(0.75339, 2.38247e-06, 5.77569e-07, 1)
+theme_override_colors/font_outline_color = Color(0.999891, 0.378119, 0.31018, 1)
 theme_override_constants/shadow_offset_x = -1
 theme_override_constants/shadow_outline_size = 10
-theme_override_fonts/font = SubResource("FontVariation_b2djl")
+theme_override_fonts/font = ExtResource("3_x5q7l")
 theme_override_font_sizes/font_size = 57
 
 [node name="Timer" type="Timer" parent="."]

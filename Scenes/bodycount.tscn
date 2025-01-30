@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cad1yymcbd8rk"]
+
+[ext_resource type="Script" path="res://Scripts/body_area.gd" id="1_33gfm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_njprr"]
+size = Vector2(3544, 2106)
+
+[node name="Bodycount" type="Area2D"]
+collision_layer = 0
+collision_mask = 6
+script = ExtResource("1_33gfm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1762, 1072)
+shape = SubResource("RectangleShape2D_njprr")

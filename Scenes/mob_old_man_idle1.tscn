@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://cm64cumn501cm"]
+
+[ext_resource type="Script" path="res://Scripts/old_man_idle.gd" id="1_fbres"]
+[ext_resource type="Texture2D" uid="uid://d0072h0pe0ol7" path="res://Scenes/Mob1.PNG" id="2_7077v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8yqsx"]
+radius = 12.0
+
+[sub_resource type="Animation" id="Animation_r8jo6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mob1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_qhlki"]
+resource_name = "idle"
+length = 0.8
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mob1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ahbsk"]
+_data = {
+"RESET": SubResource("Animation_r8jo6"),
+"idle": SubResource("Animation_qhlki")
+}
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(0, 2)
+collision_layer = 3
+script = ExtResource("1_fbres")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 1)
+shape = SubResource("CircleShape2D_8yqsx")
+
+[node name="Mob1" type="Sprite2D" parent="."]
+position = Vector2(-1, -6)
+scale = Vector2(1.15555, 1.15555)
+texture = ExtResource("2_7077v")
+hframes = 8
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_ahbsk")
+}

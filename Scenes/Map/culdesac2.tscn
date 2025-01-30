@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckhbv4t8t6yyd"]
+
+[ext_resource type="Texture2D" uid="uid://cyjo4us6o4tvw" path="res://Sprites/Player/culdesac.PNG" id="1_o2s2m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xwba"]
+size = Vector2(482.5, 108.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mkivf"]
+size = Vector2(49.5, 159.5)
+
+[node name="Nice Terrace 1" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(108.75, 90.75)
+shape = SubResource("RectangleShape2D_1xwba")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(107, 333)
+shape = SubResource("RectangleShape2D_1xwba")
+
+[node name="Culdesac" type="Sprite2D" parent="."]
+position = Vector2(109, 202)
+texture = ExtResource("1_o2s2m")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(323.5, 113.5)
+shape = SubResource("RectangleShape2D_mkivf")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(323.25, 306.75)
+shape = SubResource("RectangleShape2D_mkivf")

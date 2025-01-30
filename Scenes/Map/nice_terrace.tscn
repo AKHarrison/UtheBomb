@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://djhfka7d12hm6"]
+
+[ext_resource type="Texture2D" uid="uid://btqx842ui5olk" path="res://Sprites/NiceTerr.PNG" id="1_tg1wj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xwba"]
+size = Vector2(238, 108)
+
+[node name="Nice Terrace 2" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_1xwba")
+
+[node name="NiceTerr" type="Sprite2D" parent="."]
+position = Vector2(4, -2)
+texture = ExtResource("1_tg1wj")
