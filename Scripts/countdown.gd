@@ -4,6 +4,7 @@ extends Node
 
 func _ready():
 	GlobalAutoload.timer.timeout.connect(time_left_to_live)
+	GlobalAutoload.timer.paused = false
 	
 func time_left_to_live():
 	var time_left = GlobalAutoload.timer.time_left

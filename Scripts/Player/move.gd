@@ -11,5 +11,9 @@ func _physics_process(delta):
 	if input_direction != Vector2.ZERO:
 		parent.velocity = input_direction.normalized() * move_speed
 		anim.play("down")
+		
+	else:
+		parent.velocity = Vector2.ZERO
+		
 
 	parent.move_and_slide()

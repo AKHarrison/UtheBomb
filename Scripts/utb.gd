@@ -10,8 +10,8 @@ const GRID_SIZE = 32
 @export var player = CharacterBody2D
 
 
-var display_width = 1920
-var display_height = 1920
+var display_width = 3500
+var display_height = 3000
 
 var fogImage = Image.new()
 var fogTexture = ImageTexture.new()
