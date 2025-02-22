@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqammca2gydta"]
+
+[sub_resource type="GDScript" id="GDScript_osq4e"]
+script/source = "extends Control
+
+var running = false
+var start_time = 0
+
+
+func _ready():
+	pass
+	
+func _process(delta):
+	if running:
+		get_time()
+
+func start():
+	running = true
+	start_time = Time.get_unix_time_from_system()
+
+	
+
+func get_time():
+	var time_now = Time.get_unix_time_from_system()
+	var elapsed = time_now - start_time
+	var seconds = elapsed % 60
+	var hours = elapsed / 3600
+	var minutes = (elapsed - (3600*hours)) / 60
+	var elapsed_time = \"%02d:%02d\" % [minutes, seconds]
+	
+
+	
+	
+func stop():
+	running = false
+"
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = SubResource("GDScript_osq4e")
