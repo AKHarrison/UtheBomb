@@ -9,7 +9,7 @@ var special_health = 1
 var health = 3 
   # Reference to the Flurp2D sprite
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
-@onready var dead_flurp = preload(\"res://Scenes/mob_old_man_idle1.tscn\")
+@onready var dead_flurp = preload(\"res://Scenes/DeadGalump2.tscn\")
 @onready var target_to_chase = get_node(\"/root/Game/UTB/player\")
 @onready var start: PathFollow2D = %Start
 
@@ -107,7 +107,7 @@ _data = {
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(0, 2)
 collision_layer = 2147585027
-collision_mask = 2147516417
+collision_mask = 2147483649
 script = SubResource("GDScript_xelhq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

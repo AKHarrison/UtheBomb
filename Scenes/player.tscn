@@ -8,13 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://bnnoe0n8qc8wb" path="res://Sprites/Player/body_move.PNG" id="8_7fqfg"]
 [ext_resource type="PackedScene" uid="uid://s5lu8j5dhcc4" path="res://Scenes/head3.tscn" id="8_dqcr6"]
 [ext_resource type="PackedScene" uid="uid://cx37kct5b14nv" path="res://Scenes/hitbox.tscn" id="8_k5coi"]
-[ext_resource type="PackedScene" uid="uid://dxh6k073bm5x7" path="res://yer_deed.tscn" id="9_ikr3i"]
+[ext_resource type="PackedScene" uid="uid://4wsjnmyjjiji" path="res://yer_deed.tscn" id="9_ikr3i"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ni0cc"]
-radius = 2.0
+radius = 0.950032
 
 [sub_resource type="Animation" id="Animation_setpl"]
-length = 0.001
+step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -30,7 +30,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_8oguf"]
 resource_name = "down"
-length = 0.8
+length = 0.4
 loop_mode = 1
 step = 0.05
 tracks/0/type = "value"
@@ -40,7 +40,7 @@ tracks/0/path = NodePath("BodyIdle:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7]
@@ -48,9 +48,9 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_dd8rx"]
 resource_name = "idle"
-length = 0.8
+length = 0.4
 loop_mode = 1
-step = 0.1
+step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -58,7 +58,7 @@ tracks/0/path = NodePath("BodyIdle:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7]
@@ -112,8 +112,8 @@ script = ExtResource("1_bjts0")
 z_index = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -3)
-scale = Vector2(4.05595, 5.06899)
+position = Vector2(1, 0)
+scale = Vector2(6.31557, 6.1624)
 shape = SubResource("CircleShape2D_ni0cc")
 
 [node name="anim" type="AnimationPlayer" parent="."]

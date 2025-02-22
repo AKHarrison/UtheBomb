@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://dltnhmaohgtkr"]
+[gd_scene load_steps=8 format=3 uid="uid://dltnhmaohgtkr"]
 
-[ext_resource type="Theme" uid="uid://cfn20af484k6g" path="res://themes/button.tres" id="1_17ns6"]
 [ext_resource type="Theme" uid="uid://p7nsg5h7tqe1" path="res://themes/menu_theme.tres" id="2_khfv3"]
 [ext_resource type="Theme" uid="uid://b4be48otlkkba" path="res://themes/menu_label.tres" id="3_15mfs"]
+[ext_resource type="FontFile" uid="uid://bv40sgqyl0ns6" path="res://Scenes/atop-font/Atop-R99O3.ttf" id="3_sgprx"]
+[ext_resource type="Texture2D" uid="uid://cgo441hv1dvv1" path="res://Sprites/shelter.png" id="4_811ac"]
 [ext_resource type="Script" path="res://Scripts/button.gd" id="4_s3h0t"]
+[ext_resource type="Script" path="res://Scenes/button_3.gd" id="5_84ka2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_iqsj8"]
 
 [node name="Main Menu" type="CenterContainer"]
 anchors_preset = 15
@@ -15,10 +19,7 @@ theme = ExtResource("2_khfv3")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 2
-theme = ExtResource("1_17ns6")
-
-[node name="Panel" type="Panel" parent="PanelContainer"]
-layout_mode = 2
+theme = ExtResource("2_khfv3")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
 custom_minimum_size = Vector2(300, 0)
@@ -28,23 +29,46 @@ theme = ExtResource("2_khfv3")
 [node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_15mfs")
+theme_override_fonts/font = ExtResource("3_sgprx")
 text = "Main Menu"
 horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture = ExtResource("4_811ac")
+stretch_mode = 3
 
 [node name="Button" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_15mfs")
+theme_override_fonts/font = ExtResource("3_sgprx")
 text = "New Game"
 script = ExtResource("4_s3h0t")
-
-[node name="Button2" type="Button" parent="PanelContainer/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("3_15mfs")
-text = "Continue"
 
 [node name="Button3" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_15mfs")
+theme_override_fonts/font = ExtResource("3_sgprx")
 text = "Quit"
+script = ExtResource("5_84ka2")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 2
+size_flags_stretch_ratio = 3.97
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "What a night?!?!   You don't know what you did but, you have pissed of an eniter small town with your antics last night.
+Which small town? you cant even remember? Thats not all....
+Whats that beeping, you ask?  You have been wired up to explode if any of the towns residents come near, 
+keep them away, of the thing will go off, stop them chasing you by insulting them/
+W A S D      TO  MOVE |   ENTER       TO iNSULT
+But if you can get to this bombshelter located behind the football pitches, you won't save yourself, but you will save the town"
+label_settings = SubResource("LabelSettings_iqsj8")
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Button" to="PanelContainer/VBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Button3" to="PanelContainer/VBoxContainer/Button3" method="_on_pressed"]

@@ -10,7 +10,7 @@ top_level = true
 position = Vector2(2.98023e-08, -1)
 rotation = 0.825333
 collision_layer = 0
-collision_mask = 65539
+collision_mask = 65538
 script = ExtResource("1_ls0gp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

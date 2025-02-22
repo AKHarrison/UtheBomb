@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cpqft1x7c7l2f"]
+[gd_scene load_steps=9 format=3 uid="uid://cpqft1x7c7l2f"]
 
 [ext_resource type="Script" path="res://Scripts/shelter.gd" id="1_m0128"]
 [ext_resource type="PackedScene" uid="uid://bd4voci66de7x" path="res://Scenes/total_time.tscn" id="2_go2w7"]
 [ext_resource type="Texture2D" uid="uid://cgo441hv1dvv1" path="res://Sprites/shelter.png" id="2_okcjy"]
+[ext_resource type="Theme" uid="uid://p7nsg5h7tqe1" path="res://themes/menu_theme.tres" id="4_32syp"]
+[ext_resource type="FontFile" uid="uid://bv40sgqyl0ns6" path="res://Scenes/atop-font/Atop-R99O3.ttf" id="5_adya1"]
+[ext_resource type="Script" path="res://Scenes/button.gd" id="6_p07h1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1x1be"]
 size = Vector2(35, 30)
@@ -50,13 +53,15 @@ offset_right = 822.0
 offset_bottom = 239.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme = ExtResource("4_32syp")
+theme_override_fonts/font = ExtResource("5_adya1")
 theme_override_font_sizes/font_size = 146
 text = "Ya Wun"
 
 [node name="Label2" type="Label" parent="YaWun"]
 unique_name_in_owner = true
-anchors_preset = -1
+visible = false
+anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
@@ -74,5 +79,22 @@ theme_override_constants/shadow_offset_x = -1
 theme_override_constants/shadow_outline_size = 10
 theme_override_fonts/font = SubResource("FontVariation_bipjj")
 theme_override_font_sizes/font_size = 57
+
+[node name="Button" type="Button" parent="YaWun"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.0
+offset_top = 167.0
+offset_right = -30.0
+offset_bottom = 194.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_32syp")
+theme_override_font_sizes/font_size = 64
+text = "QUIT"
+script = ExtResource("6_p07h1")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

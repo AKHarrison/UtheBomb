@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://diop6jcbm2ven"]
+[gd_scene load_steps=7 format=3 uid="uid://8pv53ndl5erx"]
 
-[ext_resource type="Texture2D" uid="uid://d0072h0pe0ol7" path="res://Scenes/Mob1.PNG" id="2_sm4u0"]
+[ext_resource type="Texture2D" uid="uid://tab6d4bk3ero" path="res://Scenes/MOB 2.PNG" id="1_ds62d"]
 
 [sub_resource type="GDScript" id="GDScript_xelhq"]
 script/source = "extends CharacterBody2D
@@ -9,7 +9,7 @@ var special_health = 1
 var health = 3 
   # Reference to the Flurp2D sprite
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
-@onready var dead_flurp = preload(\"res://Scenes/mob_old_man_idle1.tscn\")
+@onready var dead_flurp = preload(\"res://Scenes/mob_green_idle.tscn\")
 @onready var target_to_chase = get_node(\"/root/Game/UTB/player\")
 @onready var start: PathFollow2D = %Start
 
@@ -66,18 +66,19 @@ func change_state_numpty():
 radius = 12.0
 
 [sub_resource type="Animation" id="Animation_x0h34"]
-length = 0.001
+length = 0.4
+step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Mob1:frame")
+tracks/0/path = NodePath("Mob2:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0.00172517, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [4]
+"values": [4, 5, 6, 7]
 }
 
 [sub_resource type="Animation" id="Animation_ya42g"]
@@ -88,7 +89,7 @@ step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Mob1:frame")
+tracks/0/path = NodePath("Mob2:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -107,7 +108,7 @@ _data = {
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(0, 2)
 collision_layer = 2147585027
-collision_mask = 2147516417
+collision_mask = 2147483649
 script = SubResource("GDScript_xelhq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -118,15 +119,15 @@ shape = SubResource("CircleShape2D_8yqsx")
 path_desired_distance = 7.26
 path_postprocessing = 1
 
-[node name="Mob1" type="Sprite2D" parent="."]
-position = Vector2(-1, -6)
-scale = Vector2(1.09375, 1.1875)
-texture = ExtResource("2_sm4u0")
-hframes = 8
-frame = 4
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_hps8t")
 }
+
+[node name="Mob2" type="Sprite2D" parent="."]
+position = Vector2(0, -7)
+scale = Vector2(1.125, 1.21875)
+texture = ExtResource("1_ds62d")
+hframes = 8
+frame = 6
