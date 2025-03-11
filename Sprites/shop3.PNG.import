@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr4rrltmopuei"
-path="res://.godot/imported/NNiceTerr2.PNG-0935c6c469eb69406fe934030f952621.ctex"
+uid="uid://dnv1y14yrvq43"
+path="res://.godot/imported/shop3.PNG-fd65ae1efe728b4c44c9141d110f59ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/NNiceTerr2.PNG"
-dest_files=["res://.godot/imported/NNiceTerr2.PNG-0935c6c469eb69406fe934030f952621.ctex"]
+source_file="res://Sprites/shop3.PNG"
+dest_files=["res://.godot/imported/shop3.PNG-fd65ae1efe728b4c44c9141d110f59ee.ctex"]
 
 [params]
 
