@@ -1,18 +1,19 @@
-class_name State extends Node
+class_name State_Idle  extends State
+@onready var move: State_Move = $"../Move"
 
-static var player: Player
-
-# Called when th e node enters the scene tree for the first time.
-func _ready() -> void:
-	pass
 
 func Enter() -> void:
+	player.UpdateAnimation("idle")
 	pass
 	
 func Exit() -> void:
 	pass
 	
 func Process(_delta : float) -> State:
+	if player.direction != Vector2.ZERO:
+		return move
+		
+	player.velocity = Vector2.ZERO
 	return null
 	
 func Physics(_delta : float) -> State:
